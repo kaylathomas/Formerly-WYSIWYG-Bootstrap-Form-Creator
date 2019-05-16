@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-.fa-trash {
-    opacity: .2;
-}
-
-.fa-trash:hover {
-    color: red;
-    opacity: 1;
+.form-control-border {
+    border:0;
 }
