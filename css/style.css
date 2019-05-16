@@ -1,1 +1,10 @@
 @charset "UTF-8";
+
+.fa-trash {
+    opacity: .2;
+}
+
+.fa-trash:hover {
+    color: red;
+    opacity: 1;
+}
