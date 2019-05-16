@@ -24,14 +24,32 @@
                     <div class="card-body">
                         <form id="thisForm">
                             <h4 class="card-title" contenteditable="true">Your Form</h4>
-                            <div class="form-group">
-                                <label for="formInput1" id="inputLabel1" contenteditable="true">Form Label 1</label> <i class="fa fa-trash mx-2" aria-hidden="true"></i>
-                                <input type="text" class="form-control" id="formInput1">
+                            <div id="formInput1">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-border" id="InputLabel1" value="Form Label 1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="emptyFormInput1">
+                                    <button class="input-group-append btn btn-danger">
+                                        <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="formInput2" id="inputLabel2" contenteditable="true">Form Label 2</label> <i class="fa fa-trash mx-2" aria-hidden="true"></i>
-                                <input type="text" class="form-control" id="formInput1">
+                            <div id="formInput2">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-border" id="InputLabel2" value="Form Label 2">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="emptyFormInput2">
+                                    <button class="input-group-append btn btn-danger">
+                                        <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
+                            <!-- <div class="form-group">
+                                <input type="text" class="form-control" id="InputLabel2" value="Form Label 2"> <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                                <input type="text" class="form-control" id="formInput2">
+                            </div> -->
                             <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
                         </form>
                     </div><!--CARD BODY-->
