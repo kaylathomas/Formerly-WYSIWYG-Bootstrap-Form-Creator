@@ -3,3 +3,8 @@
 .form-control-border {
     border:0;
 }
+
+.bootstrap-header-image{
+    height: auto;
+    width: 30%;
+}

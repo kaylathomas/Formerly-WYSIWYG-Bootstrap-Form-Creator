@@ -8,17 +8,15 @@ $( document ).ready(function() {
     $("#addField").click(function() {
         formCount++
         $("#thisForm").append(`
-        <div id="formInput${formCount}">
-            <div class="form-group">
-                <input type="text" class="form-control form-control-border" id="InputLabel${formCount}" value="Form Label ${formCount}">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="emptyFormInput${formCount}">
-                <button class="input-group-append btn btn-danger">
-                    <i class="fa fa-trash mx-2" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
+            <div id="formInput${formCount}">
+                <label for="emptyFormInput${formCount}" contenteditable="true">Form Label ${formCount}</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="emptyFormInput${formCount}">
+                    <button class="input-group-append btn btn-danger">
+                        <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                    </button>
+                </div>
+             </div>
         `)
 
         //-----------------------------------------
@@ -26,8 +24,18 @@ $( document ).ready(function() {
         //-----------------------------------------
         $(".btn-danger").click(function(event){
             event.preventDefault()
-            formCount--
             $(this).parent().parent().remove()
         })
+
+//-----------------------------------------
+//          FORMAT LIVE VIEW
+//-----------------------------------------
+        $("#getHTML").click(function(event){ 
+            let formContent = $("yourForm").html()
+            $("#hiddenDiv").append(formContent)
+            $("#liveCode").val($("#yourForm").html())
+            $()
+        })
     })
+    // for(var i = 0; i < rooms.results.length; i++){
 });
