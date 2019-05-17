@@ -16,13 +16,17 @@
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
+<!------------------------------------->
+<!--         END OF HEADER           -->
+<!------------------------------------->
     <body>
                 <img src="bootstrap-form-generator.png" class="mx-auto d-block bootstrap-header-image" alt="Bootstrap logo">
+        <!-- <p class="display-4 font-weight-lighter text-center">Form Color:</p> -->
         <div id="yourForm" class="my-3">
             <div class="container">
             <div class="row">
                 <div class="card w-100">
-                    <div class="card-body">
+                    <div class="card-body" id="cardBody">
                         <form id="thisForm">
                             
                             <h3 class="card-title" contenteditable="true">Your Form</h3>
@@ -30,7 +34,7 @@
                                 <label for="emptyFormInput1" contenteditable="true">Form Label 1</label>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="emptyFormInput1">
-                                    <button class="input-group-append btn btn-danger">
+                                    <button class="input-group-append btn delete-button">
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
@@ -39,7 +43,7 @@
                                 <label for="emptyFormInput2" contenteditable="true">Form Label 2</label>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="emptyFormInput2">
-                                    <button class="input-group-append btn btn-danger">
+                                    <button class="input-group-append btn delete-button">
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
@@ -50,8 +54,30 @@
             </div><!--ROW END-->
             </div><!--CONTAINER END-->
         </div> <!--yourForm CONTAINER-->
-        <button class="btn btn-primary btn-lg btn-block mt-4 w-50 mx-auto font-weight-lighter" id="addField">ADD A FIELD <i class="fas fa-plus"></i></button>
-        <button class="btn btn-success btn-lg btn-block mt-2 mb-4 w-50 mx-auto font-weight-lighter" id="getHTML">GET YOUR HTML <i class="fas fa-code"></i></button>
+    <div class="container">
+            <div class="row">
+                <p class="display-4 font-weight-lighter">Form Color:</p>
+                <div class="mx-auto">
+                    <button type="button" class="btn btn-primary mx-1 my-3" id="buttonPrimary">Primary</button>
+                    <button type="button" class="btn btn-secondary mx-1" id="buttonSecondary">Secondary</button>
+                    <button type="button" class="btn btn-success mx-1" id="buttonSuccess">Success</button>
+                    <button type="button" class="btn btn-danger mx-1" id="buttonDanger">Danger</button>
+                    <button type="button" class="btn btn-warning mx-1" id="buttonWarning">Warning</button>
+                    <button type="button" class="btn btn-info mx-1" id="buttonInfo">Info</button>
+                    <button type="button" class="btn btn-light mx-1" id="buttonLight">Light</button>
+                    <button type="button" class="btn btn-dark mx-1" id="buttonDark">Dark</button>
+                </div>
+            </div><!-- ROW END -->
+        </div><!-- CONTAINER END -->
+        <div class="container">
+        <div class="row">
+                <button class="add-fields btn btn-primary btn-lg mt-4 mx-1 font-weight-lighter" id="addField">ADD A FIELD <i class="fas fa-plus"></i></button>
+                <button class="add-fields btn btn-danger btn-lg mt-4 mx-1 font-weight-lighter" id="addDual">DUAL FIELDS <i class="fas fa-plus"></i></button>
+        </div>
+        <div class="row">
+            <button class="btn btn-success btn-lg btn-block mt-2 mb-4 w-50 mx-auto font-weight-lighter" id="getHTML">GET YOUR HTML <i class="fas fa-code"></i></button>
+        </div>
+        </div>
         <div class="container">
             <div class="row">
                 <form class="w-100">

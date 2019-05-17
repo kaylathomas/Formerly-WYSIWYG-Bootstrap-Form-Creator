@@ -1,10 +1,21 @@
 @charset "UTF-8";
 
-.form-control-border {
-    border:0;
+
+
+.form-color{
+    font-size: 180%;
 }
 
 .bootstrap-header-image{
     height: auto;
     width: 30%;
+}
+
+.delete-button{
+    background-color: #ff5555;
+    color: white;
+}
+
+.add-fields{
+    width: 45%;
 }
