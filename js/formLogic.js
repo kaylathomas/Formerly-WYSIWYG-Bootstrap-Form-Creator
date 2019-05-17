@@ -13,7 +13,7 @@ $( document ).ready(function() {
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" id="emptyFormInput${formCount}">
                     <button class="input-group-append btn btn-danger">
-                        <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
              </div>
@@ -31,10 +31,12 @@ $( document ).ready(function() {
 //          FORMAT LIVE VIEW
 //-----------------------------------------
         $("#getHTML").click(function(event){ 
-            let formContent = $("yourForm").html()
-            $("#hiddenDiv").append(formContent)
-            $("#liveCode").val($("#yourForm").html())
-            $()
+            $("#hiddenDiv").append($("#yourForm").html())
+            $("#hiddenDiv button").remove()
+            $("#hiddenDiv label").removeAttr("contenteditable")
+            $("#hiddenDiv h3").removeAttr("contenteditable")
+            $("#liveCode").val($("#hiddenDiv").html())
+            $("#hiddenDiv").empty()
         })
     })
     // for(var i = 0; i < rooms.results.length; i++){

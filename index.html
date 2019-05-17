@@ -31,7 +31,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="emptyFormInput1">
                                     <button class="input-group-append btn btn-danger">
-                                        <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                                        <i class="fas fa-times"></i>
                                     </button>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="emptyFormInput2">
                                     <button class="input-group-append btn btn-danger">
-                                        <i class="fa fa-trash mx-2" aria-hidden="true"></i>
+                                        <i class="fas fa-times"></i>
                                     </button>
                                 </div>
                             </div>
@@ -50,19 +50,19 @@
             </div><!--ROW END-->
             </div><!--CONTAINER END-->
         </div> <!--yourForm CONTAINER-->
-        <button class="btn btn-primary btn-block mt-4 w-50 mx-auto" id="addField">ADD A FIELD</button>
-        <button class="btn btn-success btn-block mt-2 mb-4 w-50 mx-auto" id="getHTML">GET YOUR HTML</button>
+        <button class="btn btn-primary btn-lg btn-block mt-4 w-50 mx-auto font-weight-lighter" id="addField">ADD A FIELD <i class="fas fa-plus"></i></button>
+        <button class="btn btn-success btn-lg btn-block mt-2 mb-4 w-50 mx-auto font-weight-lighter" id="getHTML">GET YOUR HTML <i class="fas fa-code"></i></button>
         <div class="container">
             <div class="row">
                 <form class="w-100">
-                    <h2>Copy Your Form:</h2>
+                    <h2 class="display-4 font-weight-lighter">Copy Your Form:</h2>
                     <div class="form-group">
                         <textarea class="form-control" id="liveCode" rows="7"></textarea>
                     </div>
                 </form>
             </div>
         </div>
-        <div id="hiddenDiv"></div>
+        <p id="hiddenDiv" class="d-none"></p>
     <script src="js/formLogic.js"></script>
     </body>
 </html>
