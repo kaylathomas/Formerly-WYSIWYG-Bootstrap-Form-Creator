@@ -31,14 +31,24 @@
                             
                             <h3 class="card-title" contenteditable="true">Your Form</h3>
                             <div id="formInput1">
-                                <label for="emptyFormInput1" contenteditable="true">Form Label 1</label>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" id="emptyFormInput1">
-                                    <button class="input-group-append btn delete-button">
-                                        <i class="fas fa-times"></i>
-                                    </button>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="emptyFormInput1" contenteditable="true">Form Label 1</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="emptyFormInput1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="emptyFormInput2" contenteditable="true">Form Label 1</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="emptyFormInput2">
+                                            <button class="input-group-append btn dual-times">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </div><!-- END OF FORM INPUT -->
                             <div id="formInput2">
                                 <label for="emptyFormInput2" contenteditable="true">Form Label 2</label>
                                 <div class="input-group mb-3">
@@ -55,26 +65,82 @@
             </div><!--CONTAINER END-->
         </div> <!--yourForm CONTAINER-->
     <div class="container">
-            <div class="row">
-                <p class="display-4 font-weight-lighter">Form Color:</p>
-                <div class="mx-auto">
-                    <button type="button" class="btn btn-primary mx-1 my-3" id="buttonPrimary">Primary</button>
-                    <button type="button" class="btn btn-secondary mx-1" id="buttonSecondary">Secondary</button>
-                    <button type="button" class="btn btn-success mx-1" id="buttonSuccess">Success</button>
-                    <button type="button" class="btn btn-danger mx-1" id="buttonDanger">Danger</button>
-                    <button type="button" class="btn btn-warning mx-1" id="buttonWarning">Warning</button>
-                    <button type="button" class="btn btn-info mx-1" id="buttonInfo">Info</button>
-                    <button type="button" class="btn btn-light mx-1" id="buttonLight">Light</button>
-                    <button type="button" class="btn btn-dark mx-1" id="buttonDark">Dark</button>
+        <div class="row">
+            <div class="accordion w-100" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4 class="text-center font-weight-lighter">Form Color</h4>
+                        </button>
+                    </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <!-- <p class="display-4 font-weight-lighter">Form Color:</p> -->
+                                    <div class="mx-auto">
+                                        <button type="button" class="btn btn-primary mx-1 my-3" id="buttonPrimary">Primary</button>
+                                        <button type="button" class="btn btn-secondary mx-1" id="buttonSecondary">Secondary</button>
+                                        <button type="button" class="btn btn-success mx-1" id="buttonSuccess">Success</button>
+                                        <button type="button" class="btn btn-danger mx-1" id="buttonDanger">Danger</button>
+                                        <button type="button" class="btn btn-warning mx-1" id="buttonWarning">Warning</button>
+                                        <button type="button" class="btn btn-info mx-1" id="buttonInfo">Info</button>
+                                        <button type="button" class="btn btn-light mx-1" id="buttonLight">Light</button>
+                                        <button type="button" class="btn btn-dark mx-1" id="buttonDark">Dark</button>
+                                    </div>
+                                </div><!-- ROW END -->
+                            </div><!-- CONTAINER END -->
+                    </div>
                 </div>
-            </div><!-- ROW END -->
-        </div><!-- CONTAINER END -->
-        <div class="container">
-        <div class="row">
-                <button class="add-fields btn btn-primary btn-lg mt-4 mx-1 font-weight-lighter" id="addField">ADD A FIELD <i class="fas fa-plus"></i></button>
-                <button class="add-fields btn btn-danger btn-lg mt-4 mx-1 font-weight-lighter" id="addDual">DUAL FIELDS <i class="fas fa-plus"></i></button>
+            </div>
+                <div class="card">
+                        <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h4 class="text-center font-weight-lighter">Input Fields</h4>
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <button class="add-fields btn btn-primary btn-lg mx-1 font-weight-lighter" id="addField">ADD A FIELD <i class="fas fa-plus"></i></button>
+                            <button class="add-fields btn btn-danger btn-lg mx-1 font-weight-lighter" id="addDual">DUAL FIELDS <i class="fas fa-plus"></i></button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h4 class="text-center font-weight-lighter">Checkboxes</h4>
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                            <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h4 class="text-center font-weight-lighter">Radio Buttons</h4>
+                                </button>
+                            </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            </div>
+                        </div>
+                    </div>
         </div>
-        <div class="row">
+    </div>
             <button class="btn btn-success btn-lg btn-block mt-2 mb-4 w-50 mx-auto font-weight-lighter" id="getHTML">GET YOUR HTML <i class="fas fa-code"></i></button>
         </div>
         </div>
@@ -89,6 +155,8 @@
             </div>
         </div>
         <p id="hiddenDiv" class="d-none"></p>
-    <script src="js/formLogic.js"></script>
+    <script src="js/addInputs.js"></script>
+    <script src="js/deleteInputs.js"></script>
+    <script src="js/formChanges.js"></script>
     </body>
 </html>
