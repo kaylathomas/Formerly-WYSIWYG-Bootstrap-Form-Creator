@@ -1,4 +1,4 @@
-let formCount = 2
+let formCount = 4
 
 //-----------------------------------------
 //          ADD A FORM FIELD
@@ -42,6 +42,102 @@ $("#addDual").click(function() {
                     </div>
                 </div>
             </div>
-        </div><!-- END OF FORM INPUT -->
+        </div><!-- END OF FORM INPUT ${formCount} -->
     `)
 })
+
+//-----------------------------------------
+//              ADD A CHECKBOX
+//-----------------------------------------
+$("#addCheckbox").click(function() {
+    formCount++
+    $("#thisForm").append(`
+        <div id="formInput${formCount}">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
+                        <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
+                            Default checkbox ${formCount}
+                        </label> <button class="btn delete-button"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!--END OF FORM INPUT ${formCount}-->
+    `)
+})
+
+//-----------------------------------------
+//          ADD A DUAL CHECKBOX
+//-----------------------------------------
+$("#dualCheckboxes").click(function() {
+    formCount++
+    $("#thisForm").append(`
+        <div id="formInput${formCount}">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
+                        <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
+                            Default checkbox ${formCount}
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
+                        <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
+                            Default checkbox ${formCount}
+                        </label><button class="btn dual-times float-right"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!--END OF FORM INPUT ${formCount}-->
+    `)
+})
+
+//-----------------------------------------
+//          ADD A TRIPLE CHECKBOX
+//-----------------------------------------
+$("#tripleCheckboxes").click(function() {
+    formCount++
+    $("#thisForm").append(`
+        <div id="formInput${formCount}">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
+                        <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
+                            Default checkbox ${formCount}
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
+                        <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
+                            Default checkbox ${formCount}
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
+                        <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
+                            Default checkbox ${formCount}
+                        </label><button class="btn delete-multi float-right"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!--END OF FORM INPUT ${formCount}-->
+    `)
+})
+
+
+
+// $("#addDual").click(function() {
+//     formCount++
+//     $("#thisForm").append(`
+    
+//     `)
+// })

@@ -7,7 +7,12 @@ $("#getHTML").click(function(event){
     $("#hiddenDiv label").removeAttr("contenteditable")
     $("#hiddenDiv h3").removeAttr("contenteditable")
 //Adds a submit button to the end of the form.
-    $("#hiddenDiv #thisForm").append('<button type="submit" class="btn btn-primary float-right">Submit</button>')
+//Button color depends on color selected for form.
+    if ($("#buttonPrimary").hasClass("active") || $("#buttonSecondary").hasClass("active") || $("#buttonSuccess").hasClass("active") || $("#buttonDanger").hasClass("active") || $("#buttonWarning").hasClass("active") || $("#buttonInfo").hasClass("active") || $("#buttonDark").hasClass("active")) {
+        $("#hiddenDiv #thisForm").append('<button type="button" class="btn btn-outline-light float-right">Submit</button>')
+    } else {
+        $("#hiddenDiv #thisForm").append('<button type="button" class="btn btn-outline-dark float-right">Submit</button>')
+    }
     $("#liveCode").val($("#hiddenDiv").html())
 //Clears the hidden div
     $("#hiddenDiv").empty()

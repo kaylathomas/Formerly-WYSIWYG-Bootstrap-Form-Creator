@@ -21,6 +21,16 @@
     color: white;
 }
 
+.delete-multi{
+    background-color: #ff5555;
+    color: white; 
+}
+
 .add-fields{
     width: 45%;
+}
+
+.get-html{
+    background-color: #008a1c;
+    color: #fff;
 }
