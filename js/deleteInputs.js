@@ -11,7 +11,7 @@ $(".delete-button").click(function(event){
 //-----------------------------------------------------
 $(".dual-times").click(function(event){
     event.preventDefault()
-    $(this).parent().parent().parent().parent().remove()
+    $(this).parent().parent().parent().parent().parent().remove()
 })
 
 //-------------------------------------------------------
