@@ -43,13 +43,13 @@
                                 <span>
                                     <div class="form-row">
                                         <div class="col">
-                                            <label for="emptyFormInput1" contenteditable="true">Form Label 1</label>
+                                            <label for="emptyFormInput1" contenteditable="true" class="font-weight-bold">Form Label 1</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" id="emptyFormInput1">
                                             </div>
                                         </div>
                                         <div class="col">
-                                            <label for="emptyFormInput2" contenteditable="true">Form Label 1</label>
+                                            <label for="emptyFormInput2" contenteditable="true" class="font-weight-bold">Form Label 1</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" id="emptyFormInput1">
                                                 <button class="input-group-append btn dual-times">
@@ -62,7 +62,7 @@
                             </div>
                             <div class="formInput">
                                 <span>
-                                    <label for="emptyFormInput2" contenteditable="true">Form Label 2</label>
+                                    <label for="emptyFormInput2" contenteditable="true" class="font-weight-bold">Form Label 2</label>
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" id="emptyFormInput2">
                                         <button class="input-group-append btn delete-button">
@@ -104,7 +104,16 @@
                                         <div class="col">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios2" value="option2">
+                                                    id="exampleRadios4" value="option2">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    Default Radio 4
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                    id="exampleRadios4" value="option2">
                                                 <label class="form-check-label" for="exampleRadios2">
                                                     Default Radio 4
                                                 </label>
@@ -113,18 +122,9 @@
                                         <div class="col">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Default Radio 4
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Default Radio 4
+                                                    id="exampleRadios3" value="option2">
+                                                <label class="form-check-label" for="exampleRadios3">
+                                                    Default Radio
                                                 </label><button class="btn delete-multi float-right"><i
                                                         class="fas fa-times"></i></button>
                                             </div>
@@ -163,19 +163,19 @@
                                 <div class="row">
                                     <!-- <p class="display-4 font-weight-lighter">Form Color:</p> -->
                                     <div class="mx-auto">
-                                        <button type="button" class="btn btn-primary mx-1 my-3"
+                                        <button type="button" class="btn btn-primary mx-1 my-3 color-button"
                                             id="buttonPrimary">Primary</button>
-                                        <button type="button" class="btn btn-secondary mx-1"
+                                        <button type="button" class="btn btn-secondary mx-1 color-button"
                                             id="buttonSecondary">Secondary</button>
-                                        <button type="button" class="btn btn-success mx-1"
+                                        <button type="button" class="btn btn-success mx-1 color-button"
                                             id="buttonSuccess">Success</button>
-                                        <button type="button" class="btn btn-danger mx-1"
+                                        <button type="button" class="btn btn-danger mx-1 color-button"
                                             id="buttonDanger">Danger</button>
-                                        <button type="button" class="btn btn-warning mx-1"
+                                        <button type="button" class="btn btn-warning mx-1 color-button"
                                             id="buttonWarning">Warning</button>
-                                        <button type="button" class="btn btn-info mx-1" id="buttonInfo">Info</button>
-                                        <button type="button" class="btn btn-light mx-1" id="buttonLight">Light</button>
-                                        <button type="button" class="btn btn-dark mx-1" id="buttonDark">Dark</button>
+                                        <button type="button" class="btn btn-info mx-1 color-button" id="buttonInfo">Info</button>
+                                        <button type="button" class="btn btn-light mx-1 color-button" id="buttonLight">Light</button>
+                                        <button type="button" class="btn btn-dark mx-1 color-button" id="buttonDark">Dark</button>
                                     </div>
                                 </div><!-- ROW END -->
                             </div><!-- CONTAINER END -->
@@ -194,10 +194,8 @@
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body text-center">
-                            <button class="add-fields btn btn-primary btn-lg mx-1 font-weight-lighter" id="addField">ADD
-                                A FIELD <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-danger btn-lg mx-1 font-weight-lighter" id="addDual">DUAL
-                                FIELDS <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter" id="addField">ADD A FIELD <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-danger btn-lg mx-1 font-weight-lighter" id="addDual">DUAL FIELDS <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -214,11 +212,11 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
                         <div class="card-body text-center">
-                            <button class="add-fields btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
                                 id="addCheckbox">ADD A CHECKBOX <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
                                 id="dualCheckboxes">DUAL CHECKBOXES <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
                                 id="tripleCheckboxes">TRIPLE CHECKBOXES <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
@@ -236,11 +234,11 @@
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                         data-parent="#accordionExample">
                         <div class="card-body text-center">
-                            <button class="add-fields btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
-                                id="addRadio">ADD A RADIO BUTTON <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
+                                id="addRadio">RADIO BUTTON <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
                                 id="dualRadio">DUAL RADIO BUTTONS <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
                                 id="tripleRadio">TRIPLE RADIO BUTTONS <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
@@ -258,11 +256,11 @@
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                         data-parent="#accordionExample">
                         <div class="card-body text-center">
-                            <button class="add-fields btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
                                 id="selectField">SELECT FIELD <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
                                 id="multipleSelectField">MULTIPLE SELECT FIELD <i class="fas fa-plus"></i></button>
-                            <button class="add-fields btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
+                            <button class="btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
                                 id="addTextArea">TEXT AREA <i class="fas fa-plus"></i></button>
                         </div>
                     </div>

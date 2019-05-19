@@ -26,46 +26,71 @@ $("#getHTML").click(function(event){
 //            CHANGE FORM COLOR
 //-----------------------------------------
 $("#buttonPrimary").click(function(event){
+    //Make any other selected color classes inactive
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-primary")
     $("#cardBody").toggleClass("text-white")
     $("#buttonPrimary").toggleClass("active")
 })
 
 $("#buttonSecondary").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-secondary")
     $("#cardBody").toggleClass("text-white")
     $("#buttonSecondary").toggleClass("active")
 })
 
 $("#buttonSuccess").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-success")
     $("#cardBody").toggleClass("text-white")
     $("#buttonSuccess").toggleClass("active")
 })
 
 $("#buttonDanger").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-danger")
     $("#cardBody").toggleClass("text-white")
     $("#buttonDanger").toggleClass("active")
 })
 
 $("#buttonWarning").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-warning")
     $("#cardBody").toggleClass("text-white")
     $("#buttonWarning").toggleClass("active")
 })
 
 $("#buttonInfo").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-info")
     $("#cardBody").toggleClass("text-white")
     $("#buttonInfo").toggleClass("active")
 })
 $("#buttonLight").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+
     $("#cardBody").toggleClass("bg-light")
     $("#buttonLight").toggleClass("active")
 })
 
 $("#buttonDark").click(function(event){
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+    
     $("#cardBody").toggleClass("bg-dark")
     $("#cardBody").toggleClass("text-white")
     $("#buttonDark").toggleClass("active")
