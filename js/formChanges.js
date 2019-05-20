@@ -6,10 +6,6 @@ $("#getHTML").click(function(event){
     $("#hiddenDiv button").remove()
     $("#hiddenDiv label").removeAttr("contenteditable")
     $("#hiddenDiv h3").removeAttr("contenteditable")
-    $('div .formInput').each(function(){ // For each element
-        if( $(this).text().trim() === '' )
-            $(this).remove(); // if it is empty, it removes it
-    });
 //Adds a submit button to the end of the form.
 //Button color depends on color selected for form.
     if ($("#buttonPrimary").hasClass("active") || $("#buttonSecondary").hasClass("active") || $("#buttonSuccess").hasClass("active") || $("#buttonDanger").hasClass("active") || $("#buttonWarning").hasClass("active") || $("#buttonInfo").hasClass("active") || $("#buttonDark").hasClass("active")) {
