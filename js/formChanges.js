@@ -1,7 +1,8 @@
 //-----------------------------------------
 //          FORMAT LIVE VIEW
 //-----------------------------------------
-$("#getHTML").click(function(event){ 
+$("#getHTML").on("click", function () {
+//Removes all delete buttons and contenteditable functionality
     $("#hiddenDiv").append($("#yourForm").html())
     $("#hiddenDiv button").remove()
     $("#hiddenDiv label").removeAttr("contenteditable")
@@ -14,7 +15,11 @@ $("#getHTML").click(function(event){
         $("#hiddenDiv #thisForm").append('<button type="button" class="btn btn-outline-dark float-right">Submit</button>')
     }
     $("#liveCode").val($("#hiddenDiv").html())
-//Clears the hidden div
+//Regex to delete all blank lines
+    let liveCodeValue = $('#liveCode').val();
+    let newVal = liveCodeValue.replace(/^\s*[\r\n]/gm, '');
+    $('#liveCode').val(newVal);
+    //Clears the hidden div
     $("#hiddenDiv").empty()
 })
 
