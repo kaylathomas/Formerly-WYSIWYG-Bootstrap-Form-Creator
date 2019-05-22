@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-
+h3 {
+    border-width: thick;
+}
 
 .form-color{
     font-size: 180%;
