@@ -4,6 +4,15 @@ h3 {
     border-width: thick;
 }
 
+.text-gray {
+    color: #939393;
+}
+
+.border-gray {
+    border-top: 1px solid #939393;
+    border-bottom: 1px solid #939393;
+}
+
 .form-color{
     font-size: 180%;
 }
