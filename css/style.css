@@ -6,6 +6,7 @@ h3 {
 
 .text-gray {
     color: #939393;
+    text-transform: uppercase;
 }
 
 .border-gray {
