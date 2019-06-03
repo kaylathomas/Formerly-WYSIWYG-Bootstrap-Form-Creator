@@ -1,4 +1,4 @@
-# Formerly: A Bootstrap Form WISYWIG Editor
+# Formerly: A WISYWIG Bootstrap Form Creator
 This tool allows easy, detailed creation and customization of Bootstrap Forms.
 
 Table of Contents:
