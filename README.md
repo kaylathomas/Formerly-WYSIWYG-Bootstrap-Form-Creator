@@ -41,7 +41,16 @@ If you would like to contribute to this project, feel free to read through the *
 File Structure
 --------------
 
-
+**Bootstrap 4** and **jQuery** have been imported via CDN.
+  - **bootstrap-form-creatorJS/**
+    - **js/** 
+      - **addInputs.js** -> All logic for adding and deleting each kind of input.
+      - **formChanges.js** -> Logic for populating "Copy Your HTML" modal and changing form background color.
+    - **css/**
+      - **style.css** -> All custom styles not included with Bootstrap 4.
+    - **index.html** -> All markup for the app.
+    
+ For a more in-depth explanation of Formerly's file structure, take a peek at the wiki.
 
 Support
 -------
