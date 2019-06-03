@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    padding-top: 20%;
+}
+
 h3 {
     border-width: thick;
 }
@@ -24,8 +30,10 @@ h3 {
 }
 
 .delete-button{
-    background-color: #ff5555;
-    color: white;
+    font-size: 150%;
+    background: -webkit-linear-gradient(rgb(152, 0, 0), rgb(255, 67, 67));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .dual-times{

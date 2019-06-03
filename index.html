@@ -31,151 +31,60 @@
 
 <body>
     <img src="bootstrap-form-generator.png" class="mx-auto d-block bootstrap-header-image" alt="Bootstrap logo">
-    <!-- <p class="display-4 font-weight-lighter text-center">Form Color:</p> -->
-    <div id="yourForm" class="my-3">
-        <div class="container">
-            <div class="row">
-                <div class="card w-100">
-                    <div class="card-body" id="cardBody">
-                        <form id="thisForm">
-                            <h3 class="card-title" contenteditable="true">Your Form</h3>
-                            <div class="formInput">
-                                <span>
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <label for="emptyFormInput1" contenteditable="true" class="font-weight-bold">Form Label 1</label>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" id="emptyFormInput1">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label for="emptyFormInput2" contenteditable="true" class="font-weight-bold">Form Label 1</label>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" id="emptyFormInput1">
-                                                <button type="button" class="input-group-append btn delete-button">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="formInput">
-                                <span>
-                                    <label for="emptyFormInput2" contenteditable="true" class="font-weight-bold">Form Label 2</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="emptyFormInput2">
-                                        <button type="button" class="input-group-append btn delete-button">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="formInput">
-                                <span>
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultCheck3">
-                                                <label class="form-check-label" for="defaultCheck1"
-                                                    contenteditable="true">
-                                                    Default checkbox 3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultCheck3">
-                                                <label class="form-check-label" for="defaultCheck1"
-                                                    contenteditable="true">
-                                                    Default checkbox 3
-                                                </label><button type="button" class="btn delete-button float-right"><i
-                                                        class="fas fa-times"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="formInput">
-                                <span>
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios4" value="option2">
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Default Radio 4
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios4" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Default Radio 4
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                    id="exampleRadios3" value="option2">
-                                                <label class="form-check-label" for="exampleRadios3">
-                                                    Default Radio
-                                                </label><button type="button" class="btn delete-button float-right"><i
-                                                        class="fas fa-times"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                    <!--CARD BODY-->
+
+    <!-- GET YOUR HTML MODAL -->
+    <div class="modal fade" id="getHTMLModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="display-4 font-weight-lighter modal-title">COPY YOUR FORM</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <!--CARD DIV-->
+                <div class="modal-body">
+
+                    <form class="w-100">
+                        <div class="form-group">
+                            <textarea class="form-control" id="liveCode" rows="15"></textarea>
+                        </div>
+                    </form>
+
+                </div>
             </div>
-            <!--ROW END-->
         </div>
-        <!--CONTAINER END-->
     </div>
-    <!--yourForm CONTAINER-->
+
+    <!-- <p class="display-4 font-weight-lighter text-center">Form Color:</p> -->
     <div class="container">
         <div class="row">
-            <div class="accordion w-100 position-sticky" id="accordionExample">
+            <div class="col-3">
+                <div class="accordion w-100 sticky-nav" id="accordionExample">
                     <div id="headingOne">
                         <div class="pt-1 my-2 border-gray text-center">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
+                                aria-expanded="false" aria-controls="collapseOne">
                                 <h3 class="font-weight-lighter text-gray"><i class="fas fa-palette"></i> Form Color
                                 </h3>
                             </button>
                         </div>
                     </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div class="container">
                                 <div class="row">
                                     <!-- <p class="display-4 font-weight-lighter">Form Color:</p> -->
-                                    <div class="mx-auto">
-                                        <button type="button" class="btn btn-primary mx-1 my-3 color-button"
-                                            id="buttonPrimary">Primary</button>
-                                        <button type="button" class="btn btn-secondary mx-1 color-button"
-                                            id="buttonSecondary">Secondary</button>
-                                        <button type="button" class="btn btn-success mx-1 color-button"
-                                            id="buttonSuccess">Success</button>
-                                        <button type="button" class="btn btn-danger mx-1 color-button"
-                                            id="buttonDanger">Danger</button>
-                                        <button type="button" class="btn btn-warning mx-1 color-button"
-                                            id="buttonWarning">Warning</button>
-                                        <button type="button" class="btn btn-info mx-1 color-button" id="buttonInfo">Info</button>
-                                        <button type="button" class="btn btn-light mx-1 color-button" id="buttonLight">Light</button>
-                                        <button type="button" class="btn btn-dark mx-1 color-button" id="buttonDark">Dark</button>
-                                    </div>
+                                        <button type="button" class="btn btn-sm btn-primary color-button btn-inline w-50" id="buttonPrimary">Primary</button>
+                                        <button type="button" class="btn btn-sm btn-secondary color-button btn-inline w-50" id="buttonSecondary">Secondary</button>
+                                        <button type="button" class="btn btn-sm btn-success color-button w-50 btn-inline" id="buttonSuccess">Success</button>
+                                        <button type="button" class="btn btn-sm btn-danger color-button w-50 btn-inline" id="buttonDanger">Danger</button>
+                                        <button type="button" class="btn btn-sm btn-warning color-button w-50 btn-inline" id="buttonWarning">Warning</button>
+                                        <button type="button" class="btn btn-sm btn-info color-button w-50 btn-inline" id="buttonInfo">Info</button>
+                                        <button type="button" class="btn btn-sm btn-light color-button w-50 btn-inline" id="buttonLight">Light</button>
+                                        <button type="button" class="btn btn-sm btn-dark color-button w-50 btn-inline" id="buttonDark">Dark</button>
+                                        <button type="button" class="btn btn-sm btn-outline-dark color-button btn-block" id="buttonDark">Custom</button>
+
                                 </div><!-- ROW END -->
                             </div><!-- CONTAINER END -->
                         </div>
@@ -192,26 +101,30 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body text-center">
                             <form>
-                                    <h4 class="font-weight-light">Number of Fields:</h4>
-                                    <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
-                                        You may add up to 3.                                          
-                                    </small>
-                        
+                                <h4 class="font-weight-light">Number of Fields:</h4>
+                                <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
+                                    You may add up to 3.
+                                </small>
+
                                 <div class="form-row">
-                                        <input type="range" min="1" max="3" value="3" class="slider w-100" id="inputFieldRange" onchange="changeFieldRange()">
+                                    <input type="range" min="1" max="3" value="3" class="slider w-100"
+                                        id="inputFieldRange" onchange="changeFieldRange()">
                                     <div class="mx-auto my-2">
-                                        <input type="number" value="3" class="w-25" id="inputFieldNumber" oninput="changeFieldNumber()">
+                                        <input type="number" value="3" class="w-25" id="inputFieldNumber"
+                                            oninput="changeFieldNumber()">
                                     </div>
                                 </div>
                             </form>
-                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-50 add-fields" id="addField">ADD FIELD <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-50 add-fields"
+                                id="addField">ADD FIELD <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                     <div id="headingThree">
                         <div class="pt-1 mb-2 border-gray text-center">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <h3 class="text-center font-weight-lighter text-gray"><i class="far fa-check-square"></i>
+                                <h3 class="text-center font-weight-lighter text-gray"><i
+                                        class="far fa-check-square"></i>
                                     Checkboxes</h3>
                             </button>
                         </div>
@@ -222,24 +135,28 @@
                             <form>
                                 <h4 class="font-weight-light">Number of Checkboxes:</h4>
                                 <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
-                                    You may add up to 3.                                          
+                                    You may add up to 3.
                                 </small>
-                        
+
                                 <div class="form-row">
-                                        <input type="range" min="1" max="3" value="3" class="slider w-100" id="inputCheckboxRange" onchange="changeCheckboxRange()">
+                                    <input type="range" min="1" max="3" value="3" class="slider w-100"
+                                        id="inputCheckboxRange" onchange="changeCheckboxRange()">
                                     <div class="mx-auto my-2">
-                                        <input type="number" value="3" class="w-25" id="inputCheckboxNumber" oninput="changeCheckboxNumber()">
+                                        <input type="number" value="3" class="w-25" id="inputCheckboxNumber"
+                                            oninput="changeCheckboxNumber()">
                                     </div>
                                 </div>
                             </form>
-                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-50 add-fields" id="addCheckbox">ADD CHECKBOX <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-50 add-fields"
+                                id="addCheckbox">ADD CHECKBOX <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                     <div id="headingFour">
                         <div class="pt-1 mb-2 border-gray text-center">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <h3 class="text-center font-weight-lighter text-gray"><i class="far fa-dot-circle"></i> Radio
+                                <h3 class="text-center font-weight-lighter text-gray"><i class="far fa-dot-circle"></i>
+                                    Radio
                                     Buttons</h3>
                             </button>
                         </div>
@@ -250,24 +167,28 @@
                             <form>
                                 <h4 class="font-weight-light">Number of Radio Buttons:</h4>
                                 <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
-                                    You may add up to 3.                                          
+                                    You may add up to 3.
                                 </small>
-                        
+
                                 <div class="form-row">
-                                        <input type="range" min="1" max="3" value="3" class="slider w-100" id="inputRadioRange" onchange="changeRadioRange()">
+                                    <input type="range" min="1" max="3" value="3" class="slider w-100"
+                                        id="inputRadioRange" onchange="changeRadioRange()">
                                     <div class="mx-auto my-2">
-                                        <input type="number" value="3" class="w-25" id="inputRadioNumber" oninput="changeRadioNumber()">
+                                        <input type="number" value="3" class="w-25" id="inputRadioNumber"
+                                            oninput="changeRadioNumber()">
                                     </div>
                                 </div>
                             </form>
-                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-50 add-fields" id="addRadio">ADD RADIO <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-50 add-fields"
+                                id="addRadio">ADD RADIO <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                     <div id="headingFive">
                         <div class="pt-1 mb-2 border-gray text-center">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <h3 class="text-center font-weight-lighter text-gray"><i class="far fa-clipboard"></i> Form
+                                <h3 class="text-center font-weight-lighter text-gray"><i class="far fa-clipboard"></i>
+                                    Form
                                     Controls</h3>
                             </button>
                         </div>
@@ -275,22 +196,117 @@
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                         data-parent="#accordionExample">
                         <div class="card-body text-center">
-                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-25"
-                                id="selectField">SELECT FIELD <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-primary btn-lg mx-1 font-weight-lighter w-25" id="selectField">SELECT
+                                FIELD <i class="fas fa-plus"></i></button>
                             <button class="btn btn-danger btn-lg mx-1 font-weight-lighter w-25"
                                 id="multipleSelectField">MULTIPLE SELECT FIELD <i class="fas fa-plus"></i></button>
-                            <button class="btn btn-warning btn-lg mx-1 font-weight-lighter w-25"
-                                id="addTextArea">TEXT AREA <i class="fas fa-plus"></i></button>
+                            <button class="btn btn-warning btn-lg mx-1 font-weight-lighter w-25" id="addTextArea">TEXT
+                                AREA <i class="fas fa-plus"></i></button>
                         </div>
                     </div>
+                </div>
             </div>
+            <div class="col-9">
+                <div id="yourForm" class="my-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card w-100">
+                                <div class="card-body" id="cardBody">
+                                    <form id="thisForm">
+                                        <h3 class="card-title" contenteditable="true">Example Form</h3>
+                                        <div class="formInput">
+                                            <span>
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <label for="emptyFormInput1" contenteditable="true"
+                                                            class="font-weight-bold">First Name:</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control"
+                                                                id="emptyFormInput1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="emptyFormInput1" contenteditable="true"
+                                                            class="font-weight-bold">Last Name:</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control"
+                                                                id="emptyFormInput1">
+                                                            <button type="button"
+                                                                class="input-group-append btn delete-button">
+                                                                <i class="fas fa-times"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="formInput">
+                                            <span>
+                                                <label for="emptyFormInput2" contenteditable="true"
+                                                    class="font-weight-bold">Email:</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" id="emptyFormInput2">
+                                                    <button type="button" class="input-group-append btn delete-button">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="formInput">
+                                            <span>
+                                                <label for="emptyFormInput3" contenteditable="true"
+                                                    class="font-weight-bold">Phone Number:</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" id="emptyFormInput3">
+                                                    <button type="button" class="input-group-append btn delete-button">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="formInput">
+                                            <span>
+                                                <label for="emptyFormInput4" contenteditable="true" class="font-weight-bold">Address:</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" id="emptyFormInput4">
+                                                    <button type="button" class="input-group-append btn delete-button">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="formInput">
+                                            <span>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlTextarea5" contenteditable="true" class="font-weight-bold">Message:</label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="5"></textarea>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--CARD BODY-->
+                            </div>
+                            <!--CARD DIV-->
+                        </div>
+                        <!--ROW END-->
+                    </div>
+                    <!--CONTAINER END-->
+                </div>
+                <!--yourForm CONTAINER-->
+            </div><!-- COL-8 DIV -->
         </div>
     </div>
-    <button type="button" class="btn btn-success btn-lg btn-block mt-2 mb-4 w-50 mx-auto font-weight-lighter" id="getHTML">GET YOUR
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+    <button type="button" class="btn btn-success btn-lg btn-block mt-2 mb-4 w-50 mx-auto font-weight-lighter" id="getHTML" data-toggle="modal" data-target="#getHTMLModal">GET YOUR
         HTML <i class="fas fa-code"></i></button>
     </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <form class="w-100">
                 <h2 class="display-4 font-weight-lighter">COPY YOUR FORM:</h2>
@@ -299,13 +315,14 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
     <p id="hiddenDiv" class="d-none"></p>
     <script src="js/addInputs.js"></script>
     <script src="js/formChanges.js"></script>
     <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script>
     <script src="https://unpkg.com/prettier@1.13.0/parser-babylon.js"></script>
     <script src="https://unpkg.com/prettier@1.13.0/parser-graphql.js"></script>
-    
+
 </body>
+
 </html>

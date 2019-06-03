@@ -132,7 +132,7 @@ $("#addCheckbox").on("click", function(){
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
                             <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
                                 Default checkbox ${formCount}
-                            </label> <button type="button" class="btn delete-button"><i class="fas fa-times"></i></button>
+                            </label> <button type="button" class="input-group-append btn delete-button"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ $("#addCheckbox").on("click", function(){
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
                             <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
                                 Default checkbox ${formCount}
-                            </label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
+                            </label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                 </div>
@@ -196,7 +196,7 @@ $("#addCheckbox").on("click", function(){
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck${formCount}">
                             <label class="form-check-label" for="defaultCheck${formCount}" contenteditable="true">
                                 Default checkbox ${formCount}
-                            </label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
+                            </label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                 </div>
@@ -244,7 +244,7 @@ $("#addRadio").on("click", function(){
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios${formCount}" value="option2">
                             <label class="form-check-label" for="exampleRadios${formCount}">
                                 Default Radio ${formCount}
-                            </label> <button type="button" class="btn delete-button"><i class="fas fa-times"></i></button>
+                            </label> <button type="button" class="input-group-append btn delete-button"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                 </div>
@@ -272,7 +272,7 @@ $("#addRadio").on("click", function(){
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios${formCount}" value="option2">
                             <label class="form-check-label" for="exampleRadios${formCount}">
                                 Default Radio ${formCount}
-                            </label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
+                            </label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                 </div>
@@ -308,7 +308,7 @@ $("#addRadio").on("click", function(){
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios${formCount}" value="option2">
                             <label class="form-check-label" for="exampleRadios${formCount}">
                                 Default Radio ${formCount}
-                            </label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
+                            </label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                 </div>
@@ -337,7 +337,7 @@ $("#selectField").on("click", function(){
         <div class="formInput">
             <span>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect${formCount}" contenteditable="true" class="font-weight-bold">Example select ${formCount}</label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
+                    <label for="exampleFormControlSelect${formCount}" contenteditable="true" class="font-weight-bold">Example select ${formCount}</label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
                         <select class="form-control" id="exampleFormControlSelect${formCount}">
                             <option>1</option>
                             <option>2</option>
@@ -361,7 +361,7 @@ $("#multipleSelectField").on("click", function(){
         <div class="formInput">
             <span>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect${formCount}" contenteditable="true" class="font-weight-bold">Example multiple select ${formCount}</label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
+                    <label for="exampleFormControlSelect${formCount}" contenteditable="true" class="font-weight-bold">Example multiple select ${formCount}</label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
                         <select multiple class="form-control" id="exampleFormControlSelect${formCount}">
                             <option>1</option>
                             <option>2</option>
@@ -385,8 +385,8 @@ $("#addTextArea").on("click", function(){
         <div class="formInput">
             <span>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea${formCount}" contenteditable="true" class="font-weight-bold">Example textarea ${formCount}</label><button type="button" class="btn delete-button float-right"><i class="fas fa-times"></i></button>
-                    <textarea class="form-control" id="exampleFormControlTextarea${formCount}" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea${formCount}" contenteditable="true" class="font-weight-bold">Example textarea ${formCount}</label><button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
+                    <textarea class="form-control" id="exampleFormControlTextarea${formCount}" rows="5"></textarea>
                 </div>
             </span>
         </div>
