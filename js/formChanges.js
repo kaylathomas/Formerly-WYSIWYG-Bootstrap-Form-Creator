@@ -90,83 +90,117 @@ $("#textAlignRightBtn").click(function(){
 //-----------------------------------------
 //            CHANGE FORM COLOR
 //-----------------------------------------
+//------------------
+//  DEFAULT BUTTON
+//------------------
+$("#buttonDefault").click(function(event){
+    //Make any other selected color classes inactive
+    $(".color-button").removeClass("active")
+    $("#cardBody").removeClass("bg-primary bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
+    $("#buttonDefault").addClass("active")
+})
+
+//------------------
+//  PRIMARY BUTTON
+//------------------
 $("#buttonPrimary").click(function(event){
     //Make any other selected color classes inactive
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-primary")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonPrimary").toggleClass("active")
+    $("#cardBody").addClass("bg-primary")
+    $("#cardBody").addClass("text-white")
+    $("#buttonPrimary").addClass("active")
 })
 
+//------------------
+// SECONDARY BUTTON
+//------------------
 $("#buttonSecondary").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-secondary")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonSecondary").toggleClass("active")
+    $("#cardBody").addClass("bg-secondary")
+    $("#cardBody").addClass("text-white")
+    $("#buttonSecondary").addClass("active")
 })
 
+//------------------
+//  SUCCESS BUTTON
+//------------------
 $("#buttonSuccess").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-success")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonSuccess").toggleClass("active")
+    $("#cardBody").addClass("bg-success")
+    $("#cardBody").addClass("text-white")
+    $("#buttonSuccess").addClass("active")
 })
 
+//-------------------
+//   DANGER BUTTON
+//-------------------
 $("#buttonDanger").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-danger")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonDanger").toggleClass("active")
+    $("#cardBody").addClass("bg-danger")
+    $("#cardBody").addClass("text-white")
+    $("#buttonDanger").addClass("active")
 })
 
+//------------------
+// WARNINING BUTTON
+//------------------
 $("#buttonWarning").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-warning")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonWarning").toggleClass("active")
+    $("#cardBody").addClass("bg-warning")
+    $("#cardBody").addClass("text-white")
+    $("#buttonWarning").addClass("active")
 })
 
+//-------------------
+//    INFO BUTTON
+//-------------------
 $("#buttonInfo").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-info")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonInfo").toggleClass("active")
+    $("#cardBody").addClass("bg-info")
+    $("#cardBody").addClass("text-white")
+    $("#buttonInfo").addClass("active")
 })
 
+//------------------
+//   LIGHT BUTTON
+//------------------
 $("#buttonLight").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
 
-    $("#cardBody").toggleClass("bg-light")
-    $("#buttonLight").toggleClass("active")
+    $("#cardBody").addClass("bg-light")
+    $("#buttonLight").addClass("active")
 })
 
+//-------------------
+//    DARK BUTTON
+//-------------------
 $("#buttonDark").click(function(event){
     $(".color-button").removeClass("active")
     $("#cardBody").removeClass("bg-secondary bg-success bg-danger bg-warning bg-info bg-light bg-dark text-white")
     
-    $("#cardBody").toggleClass("bg-dark")
-    $("#cardBody").toggleClass("text-white")
-    $("#buttonDark").toggleClass("active")
+    $("#cardBody").addClass("bg-dark")
+    $("#cardBody").addClass("text-white")
+    $("#buttonDark").addClass("active")
 })
 
 //CUSTOM FORM COLOR CHANGE:
-$("#customFormBackground").change(function(){
-    var colorValue = $(this).val();
-    $("thisForm").css("background-color", `${colorValue}`);
-});
+// $("#customFormBackground").change(function(){
+//     var colorValue = $(this).val();
+//     $("thisForm").css("background-color", `${colorValue}`);
+// });
 
 //-----------------------------------------
 //          DRAG & DROP FEATURE

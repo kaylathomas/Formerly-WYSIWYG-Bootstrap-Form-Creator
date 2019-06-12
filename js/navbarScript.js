@@ -90,4 +90,5 @@ $("#nightModeButton").on('change.bootstrapSwitch', function(e) {
 	$(".text-align-button").toggleClass("btn-outline-light btn-outline-secondary")
 	$("#blackLogo").toggle()
 	$("#whiteLogo").toggle()
+	$("#buttonDefault").toggleClass("btn-outline-dark btn-outline-light")
 });
