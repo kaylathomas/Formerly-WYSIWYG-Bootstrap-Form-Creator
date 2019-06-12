@@ -11,19 +11,24 @@ Table of Contents:
 
 Features
 --------
-Formerly is meant to be useful to both the novice developer/employee needing to quickly make a form, or the developer that would like to be able to make more specific choices with their forms, like changing attributes and aria-controls. Formerly can/allows users to:
-- Create forms within seconds using the left toolbar
-- Offers almost every form input type available to Bootstrap 4:
-  - Text input fields
-  - Checkboxes
-  - Radio Buttons
-  - Select Fields
-  - Multiple Select Fields
-  - Text Areas
+Technologies Used: HTML/CSS/JavaScript, jQuery, Bootstrap 4
+
+Formerly is meant to be useful to both the average non-technical employee needing to quickly make a form, or the more experienced developer . Forms can be created within seconds using the left toolbar. 
+
+Create forms with almost every form input type available to Bootstrap 4:
+- Text input fields
+- Checkboxes
+- Radio Buttons
+- Select Fields
+- Multiple Select Fields
+- Text Areas
 - Drag and drop created form elements
-- Edit the background color and text size/weight of form elements
-- Generate usable HTML of created forms
-- Save and delete created forms
+
+Other features/customization options include:
+
+- Form background color
+- Label font-weight and text-alignment
+- Generation of usable, clean HTML 
 
 Technologies
 ------------
