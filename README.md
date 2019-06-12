@@ -49,7 +49,7 @@ File Structure
 **Bootstrap 4** and **jQuery** have been imported via CDN.
   - **bootstrap-form-creatorJS/**
     - **jquery-ui/**
-      - jquery-ui.js -> Contains sortable script that gives sorting functinoality to each form input.
+      - **jquery-ui.js** -> Contains sortable script that gives sorting functinoality to each form input.
     - **js/** 
       - **addInputs.js** -> All logic for adding and deleting each kind of input.
       - **formChanges.js** -> Logic for populating "Copy Your HTML" modal and changing form background color.
