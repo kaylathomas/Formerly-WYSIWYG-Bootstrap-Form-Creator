@@ -3,12 +3,12 @@
 //============================
 
 let menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-		menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-		showLeft = document.getElementById( 'showLeft' ),
-		showRight = document.getElementById( 'showRight' ),
-		showLeftPush = document.getElementById( 'showLeftPush' ),
-		showRightPush = document.getElementById( 'showRightPush' ),
-		body = document.body;
+	menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+	showLeft = document.getElementById( 'showLeft' ),
+	showRight = document.getElementById( 'showRight' ),
+	showLeftPush = document.getElementById( 'showLeftPush' ),
+	showRightPush = document.getElementById( 'showRightPush' ),
+	body = document.body;
 
 $(".showLeft").click(function() {
 	classie.toggle( this, 'active' )
@@ -59,7 +59,6 @@ $("#simpleEditor").click(function(){
 	$("#developerMode").removeClass("active")
 	$(this).addClass("active")
 	$("#yourForm .input-group").addClass("mb-2")
-
 	$("#yourForm .edit-attributes").addClass("d-none")
 })
 
@@ -67,7 +66,6 @@ $("#developerMode").click(function(){
 	$("#simpleEditor").removeClass("active")
 	$(this).addClass("active")
 	$("#yourForm .input-group").removeClass("mb-2")
-
 	$("#yourForm .edit-attributes").removeClass("d-none")
 })
 

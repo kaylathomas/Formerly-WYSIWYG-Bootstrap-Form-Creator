@@ -56,15 +56,15 @@
     <!---------------------------------------------->
 
     <!-- <div class="container"> -->
-        <nav class="navbar bg-black py-0 sticky-top">
+        <nav class="navbar bg-black py-1 sticky-top">
             <a class="navbar-brand">
                 <i class="fas fa-bars showLeft hamburger-bar mx-2 text-white d-none"></i>
             </a>
             <form class="form-inline">
-                <!-- <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                     <button type="button" id="simpleEditor" class="btn btn-outline-light active">Simple Editor</button>
                     <button type="button" id="developerMode" class="btn btn-outline-light mr-2">Developer Mode</button>
-                </div> -->
+                </div>
                 <input id="nightModeButton" type="checkbox" checked data-toggle="toggle" data-onstyle="outline-light" data-width="50" data-offstyle="outline-light" data-on="<i class='fas fa-cloud-moon ml-1'></i>" data-off="<i class='fas fa-sun ml-1'></i>">
                 <a href="https://github.com/kaylathomas/Formerly-WISYWIG-Bootstrap-Form-Creator"><button type="button" class="btn btn-outline-light ml-2"><i class="fab fa-github"></i> GitHub</button></a>
             </form>
@@ -74,16 +74,17 @@
         <!-- Just an image -->
     <div class="container">
         <div class="row">
-            <div class="svg-size text-center my-2">
+            <div class="text-center my-2">
                 <img id="blackLogo" src="FormerlyLogoLongDarker.png" width="30%" />
+                <!-- <img id="blackLogo" src="FormerlyLogoLongDarker.png" width="30%" /> -->
             </div>
             
-            <div class="svg-size text-center">
+            <div class="text-center">
                 <img id="whiteLogo" src="FormerlyLogoLongWhite.png" width="30%" />
+                <!-- <img id="whiteLogo" src="FormerlyLogoLongWhite.png" width="30%" /> -->
             </div>
         </div>
     </div>
-
     
         <!-------------------------------------------->
     <!--            getYourHTML MODAL           -->
@@ -205,9 +206,9 @@
                                                             
                                 <h5 class="accordion-headers font-weight-light">Font Weight</h5>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                    <button type="button" id="fontWeightLightBtn" class="btn btn-outline-secondary font-weight-button">Light</button>
+                                    <button type="button" id="fontWeightLightBtn" class="btn btn-outline-secondary font-weight-button font-weight-light active">Light</button>
                                     <button type="button" id="fontWeightNormalBtn" class="btn btn-outline-secondary font-weight-button">Normal</button>
-                                    <button type="button" id="fontWeightBoldBtn" class="btn btn-outline-secondary font-weight-button active">Bold</button>
+                                    <button type="button" id="fontWeightBoldBtn" class="btn btn-outline-secondary font-weight-button font-weight-bold">Bold</button>
                                 </div>
 
                                 <h5 class="font-weight-light mt-2">Text Align</h5>
@@ -349,12 +350,12 @@
             <!-- BEGINNING OF FORM-->
 
             <div class="col-9 animated fadeInDown">
-                <div id="yourForm" class="my-3">
+                <div id="yourForm" class="my-3 form_html">
                     <div class="container">
                         <div class="row">
                             <div class="card w-100">
                                 <div class="card-body" id="cardBody">
-                                    <h3 class="card-title form-title" contenteditable="true">Example Form</h3>
+                                    <h3 class="card-title form-title" id="form-title" contenteditable="true">Example Form</h3>
                                     <form id="thisForm">
                                         <div class="formInput my-2">
                                             <span>
@@ -362,16 +363,16 @@
                                                     <div class="col">
                                                         <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
                                                         <label for="emptyFormInput1" contenteditable="true"
-                                                        class="font-weight-bold">First Name:</label>
+                                                        class="font-weight-light">First Name:</label>
                                                         <div class="input-group mb-2">
                                                             <input type="text" class="form-control"
                                                                 id="emptyFormInput1"/>
                                                         </div>
-                                                        <small class="d-none edit-attributes form-text mb-1">Edit Attributes</small>
+                                                        <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>    
                                                     </div>
                                                     <div class="col">
                                                         <label for="emptyFormInput1" contenteditable="true"
-                                                            class="font-weight-bold">Last Name:</label>
+                                                            class="font-weight-light">Last Name:</label>
                                                         <div class="input-group mb-2">
                                                             <input type="text" class="form-control"
                                                                 id="emptyFormInput1">
@@ -380,7 +381,7 @@
                                                                 <i class="fas fa-times"></i>
                                                             </button>
                                                         </div>
-                                                        <small class="d-none edit-attributes form-text mb-1">Edit Attributes</small>
+                                                        <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                                
                                                     </div>
                                                 </div>
                                             </span>
@@ -389,69 +390,60 @@
                                             <span>
                                                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
                                                 <label for="emptyFormInput2" contenteditable="true"
-                                                    class="font-weight-bold">Email:</label>
+                                                    class="font-weight-light">Email:</label>
                                                 <div class="input-group mb-2">
                                                     <input type="text" class="form-control" id="emptyFormInput2">
                                                     <button type="button" class="input-group-append btn delete-button">
                                                         <i class="fas fa-times"></i>
                                                     </button>
                                                 </div>
-                                                <small class="d-none edit-attributes form-text mb-1">Edit Attributes</small>
-                                            </span>
+                                                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                        </span>
                                         </div>
                                         <div class="formInput my-2">
                                             <span>
                                                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
-                                                <label for="emptyFormInput3" contenteditable="true" class="font-weight-bold">Phone Number:</label>
+                                                <label for="emptyFormInput3" contenteditable="true" class="font-weight-light">Phone Number:</label>
                                                 <div class="input-group mb-2">
                                                     <input type="text" class="form-control" id="emptyFormInput3">
                                                     <button type="button" class="input-group-append btn delete-button">
                                                         <i class="fas fa-times"></i>
                                                     </button>
                                                 </div>
-                                                <small class="d-none edit-attributes form-text mb-1">Edit Attributes</small>
-                                            </span>
+                                                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                        </span>
                                         </div>
                                         <div class="formInput my-2">
                                             <span>
                                                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
                                                 <label for="emptyFormInput4" contenteditable="true"
-                                                    class="font-weight-bold">Address:</label>
+                                                    class="font-weight-light">Address:</label>
                                                 <div class="input-group mb-2">
                                                     <input type="text" class="form-control" id="emptyFormInput4">
                                                     <button type="button" class="input-group-append btn delete-button">
                                                         <i class="fas fa-times"></i>
                                                     </button>
                                                 </div>
-                                                <small class="d-none edit-attributes form-text mb-1">Edit Attributes</small>
-                                            </span>
+                                                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                        </span>
                                         </div>
                                         <div class="formInput my-2">
                                             <span>
                                                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
                                                 <div class="form-group">
                                                         <label for="exampleFormControlTextarea5" contenteditable="true"
-                                                        class="font-weight-bold">Message:</label>
+                                                        class="font-weight-light">Message:</label>
                                                         <button type="button"
                                                         class="input-group-append btn delete-button float-right"><i
                                                             class="fas fa-times"></i></button>
                                                     <textarea class="form-control" id="exampleFormControlTextarea5"
                                                         rows="4"></textarea>
-                                                    <small class="d-none edit-attributes form-text mb-1">Edit Attributes</small>
-                                                </div>
+                                                    <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                            </div>
                                             </span>
                                         </div>
                                     </form>
-                                </div>
-                                <!--CARD BODY-->
-                            </div>
-                            <!--CARD DIV-->
-                        </div>
-                        <!--ROW END-->
-                    </div>
-                    <!--CONTAINER END-->
-                </div>
-                <!--yourForm CONTAINER-->
+                                </div><!--CARD BODY-->
+                            </div><!--CARD DIV-->
+                        </div><!--ROW END-->
+                    </div><!--CONTAINER END-->
+                </div><!--yourForm CONTAINER-->
             </div><!-- COL-8 DIV -->
         </div>
     </div>
@@ -459,6 +451,69 @@
     </div>
     <p id="hiddenDiv" class="d-none"></p>
     <p id="hiddenPreviewDiv" class="d-none"></p>
+
+    <div id="modalContainer">
+        <!-- EDIT ATTRIBUTES MODAL -->
+        <div class="container">
+            <div class="modal fade" id="editingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="display-4 font-weight-lighter modal-title">EDIT ATTRIBUTES</h2>                    
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row float-right">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="requiredCheck">
+                                    <label class="form-check-label" for="requiredCheck">
+                                        Required?
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="inputID">Input ID:</label>
+                                    <input type="text" class="form-control" id="inputID">
+                            </div>
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="inputPlaceholder">Placeholder Text:</label>
+                                    <input type="text" class="form-control" id="inputPlaceholder">
+                                </div>
+                                <div class="col-6">
+                                    <label for="inputPreFilled">Pre-filled Value:</label>
+                                    <input type="text" class="form-control" id="inputPreFilled">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMaxLength">Max Length:</label>
+                                <input type="text" class="form-control" id="inputMaxLength">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputType">Input Type:</label>
+                                <select class="form-control" id="inputType">
+                                    <option><i>Select...</i></option>
+                                    <option>Text</option>
+                                    <option>Number</option>
+                                    <option>Email</option>
+                                    <option>Password</option>
+                                    <option>Date</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- MY JS -->
     <script src="js/addInputs.js"></script>
@@ -473,8 +528,11 @@
     <!-- JQUERY & JQUERY UI -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script></body>
+    <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 
-        <!-- JQUERY UI -->
-        <script src="jquery-ui/jquery-ui.js"></script>
+    <!-- JQUERY UI -->
+    <script src="jquery-ui/jquery-ui.js"></script>
+</body>
+
+
 </html>

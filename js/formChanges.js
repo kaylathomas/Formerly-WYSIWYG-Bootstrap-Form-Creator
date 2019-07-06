@@ -32,6 +32,7 @@ $("#getHTML").on("click", function (event) {
     $("#hiddenDiv").empty()
 })
 
+
 //-----------------------------------------
 //              LABELS UTILITY
 //-----------------------------------------
@@ -202,7 +203,5 @@ $("#buttonDark").click(function(event){
 //     $("thisForm").css("background-color", `${colorValue}`);
 // });
 
-//-----------------------------------------
-//          DRAG & DROP FEATURE
-//-----------------------------------------
+
 
