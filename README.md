@@ -1,3 +1,4 @@
+![Formerly Logo](https://kaylathomas.github.io/Formerly-WYSIWYG-Bootstrap-Form-Creator/FormerlyLogoLongDarker.png)
 # Formerly: A WISYWIG Bootstrap Form Creator
 Formerly allows easy, detailed creation and customization of Bootstrap Forms. [Try it out!](https://kaylathomas.github.io/Formerly-WYSIWYG-Bootstrap-Form-Creator/)
 
