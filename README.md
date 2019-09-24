@@ -1,17 +1,17 @@
 # Formerly: A WISYWIG Bootstrap Form Creator
-This tool allows easy, detailed creation and customization of Bootstrap Forms.
+Formerly allows easy, detailed creation and customization of Bootstrap Forms. [Try it out!](https://kaylathomas.github.io/Formerly-WYSIWYG-Bootstrap-Form-Creator/)
 
 Table of Contents:
 ------------------
 - Features
-- Specs
+- Coming Soon
+- Technologies
 - File Structure
 - Contribute
 - Support
 
 Features
 --------
-Technologies Used: HTML/CSS/JavaScript, jQuery, Bootstrap 4
 
 Formerly is meant to be useful to both the average non-technical employee needing to quickly make a form, or the more experienced developer . Forms can be created within seconds using the left toolbar. 
 
@@ -28,20 +28,20 @@ Other features/customization options include:
 
 - Form background color
 - Label font-weight and text-alignment
-- Generation of usable, clean HTML 
+- Generation of usable, clean HTML Features
+- Dark mode!
+
+Coming Soon
+--------
+
+**Development Mode!**
+
+Development Mode is a work in progress. It allows users to edit form input attributes in-browser, such as IDs, ARIA labels, maximum amount of characters, input type, etc.
 
 Technologies
 ------------
 
-Formerly's frontend was created with **HTML**, **CSS**, **JavaScript**, **jQuery**, and of course, **Bootstrap 4**.
-Its backend was created with **Ruby On Rails**. Gems used include:
- - Better Errors - I strongly prefer this gem to the default errors GUI that comes with Rails.
- - Devise - For users and user authentication.
-
-Contribute
-----------
-
-If you would like to contribute to this project, feel free to read through the **File Structure** section to get an idea of where everything is, and take a look at the "Issues" tab. I plan on building a suite of similar apps assiting in the ease of use and customization of bootstrap in the future, so be sure to follow this account for updates if this is something that interests you.
+Formerly was created with **HTML**, **CSS**, **JavaScript**, **jQuery**, and of course, **Bootstrap 4**.
 
 File Structure
 --------------
@@ -57,7 +57,12 @@ File Structure
       - **style.css** -> All custom styles not included with Bootstrap 4.
     - **index.html** -> All markup for the app.
     
- For a more in-depth explanation of Formerly's file structure, take a peek at the wiki.
+
+Contribute
+----------
+
+If you would like to contribute to this project, feel free to read through the **File Structure** section to get an idea of where everything is, and take a look at the "Issues" tab. I plan on building a suite of similar apps assiting in the ease of use and customization of bootstrap in the future, so be sure to follow this account for updates if this is something that interests you.
+
 
 Support
 -------
