@@ -58,52 +58,80 @@ $("body").delegate('#addField','click', function(event){
     //ADD ONE FIELD
     function addOneField() {
         $("#thisForm").append(`
-        <div class="formInput my-2">
-            <span>
-            <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
-                <label for="emptyFormInput${formCount}" contenteditable="true">Form Label ${formCount}</label>
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="emptyFormInput${formCount}">
-                    <button type="button" class="input-group-append btn delete-button">
+        <div class="row mb-2">
+            <div class="col">
+                <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
+                <label 
+                    for="emptyFormInput2"
+                    contenteditable="true"
+                    class="font-weight-light"
+                >
+                    emptyFormInput${formCount}:
+                </label>
+                <div class="input-group">
+                    <input 
+                        type="text"
+                        class="form-control mb-2"
+                        placeholder="Email"
+                        aria-label="Email"
+                        id="emptyFormInput${formCount}"
+                    >
+                    <button type="button" class="btn delete-button">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-            <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>               
-            </span>
+                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>
+            </div>
         </div>
         `)
-
         editAttributesVisible()
         fontWeightConsistency()
-
     }
 
     //ADD TWO FIELDS
     function addTwoFields() {
         $("#thisForm").append(`
-        <div class="formInput my-2">
-            <span>
-                <div class="form-row">
-                    <div class="col">
-                    <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
-                        <label for="emptyFormInput${formCount}a" contenteditable="true">Form Label ${formCount}a</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="emptyFormInput${formCount}a">
-                        </div>
-                        <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                       
-                    </div>
-                    <div class="col">
-                        <label for="emptyFormInput${formCount}b" contenteditable="true">Form Label ${formCount}b</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="emptyFormInput${formCount}b">
-                            <button type="button" class="input-group-append btn delete-button">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                        <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                       
-                    </div>
+        <div class="row mb-2">
+            <div class="col">
+                <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
+                <label 
+                    for="emptyFormInput${formCount}a"
+                    contenteditable="true"
+                        class="font-weight-light"
+                >
+                    emptyFormInput${formCount}a:
+                </label>
+                <input 
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="First name"
+                    aria-label="First name"
+                    id="emptyFormInput${formCount}a"
+                >
+                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small> 
+            </div>
+            <div class="col">
+                <label 
+                    for="emptyFormInput${formCount}b"
+                    contenteditable="true"
+                    class="font-weight-light"
+                >
+                    emptyFormInput${formCount}b:
+                </label>
+                <div class="input-group">
+                    <input 
+                        type="text"
+                        class="form-control mb-2"
+                        placeholder="Last name"
+                        aria-label="Last name"
+                        id="emptyFormInput${formCount}b"
+                    >
+                    <button type="button" class="btn delete-button">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-            </span>
+                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small> 
+            </div>
         </div>
     `)
 
@@ -114,36 +142,65 @@ $("body").delegate('#addField','click', function(event){
     //ADD THREE FIELDS
     function addThreeFields() {
         $("#thisForm").append(`
-        <div class="formInput my-2">
-            <span>
-                <div class="form-row">
-                    <div class="col">
-                        <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
-                        <label for="emptyFormInput${formCount}a" contenteditable="true">Form Label ${formCount}</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="emptyFormInput${formCount}a">
-                        </div>
-                        <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>   
-                    </div>
-                    <div class="col">
-                        <label for="emptyFormInput${formCount}b" contenteditable="true">Form Label ${formCount}</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="emptyFormInput${formCount}b">
-                        </div>
-                        <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>   
-                    </div>
-                    <div class="col">
-                        <label for="emptyFormInput${formCount}c" contenteditable="true">Form Label ${formCount}</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="emptyFormInput${formCount}c">
-                            <button type="button" class="input-group-append btn delete-button">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                        <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>   
-                    </div>
+        <div class="row mb-2">
+            <div class="col">
+                <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
+                <label 
+                    for="emptyFormInput${formCount}a"
+                    contenteditable="true"
+                        class="font-weight-light"
+                >
+                    emptyFormInput${formCount}a:
+                </label>
+                <input 
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="First name"
+                    aria-label="First name"
+                    id="emptyFormInput${formCount}a"
+                >
+                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small> 
+            </div>
+            <div class="col">
+                <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
+                <label 
+                    for="emptyFormInput${formCount}b"
+                    contenteditable="true"
+                        class="font-weight-light"
+                >
+                    emptyFormInput${formCount}b:
+                </label>
+                <input 
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="First name"
+                    aria-label="First name"
+                    id="emptyFormInput${formCount}b"
+                >
+                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small> 
+            </div>
+            <div class="col">
+                <label 
+                    for="emptyFormInput${formCount}c"
+                    contenteditable="true"
+                    class="font-weight-light"
+                >
+                    emptyFormInput${formCount}c:
+                </label>
+                <div class="input-group">
+                    <input 
+                        type="text"
+                        class="form-control mb-2"
+                        placeholder="Last name"
+                        aria-label="Last name"
+                        id="emptyFormInput${formCount}c"
+                    >
+                    <button type="button" class="btn delete-button">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-            </span>
+                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small> 
+            </div>
         </div>
     `)
 
