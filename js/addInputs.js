@@ -58,7 +58,7 @@ $("body").delegate('#addField','click', function(event){
     //ADD ONE FIELD
     function addOneField() {
         $("#thisForm").append(`
-        <div class="row mb-2">
+        <div class="row mb-2 formInput">
             <div class="col">
                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
                 <label 
@@ -91,7 +91,7 @@ $("body").delegate('#addField','click', function(event){
     //ADD TWO FIELDS
     function addTwoFields() {
         $("#thisForm").append(`
-        <div class="row mb-2">
+        <div class="row mb-2 formInput">
             <div class="col">
                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
                 <label 
@@ -142,7 +142,7 @@ $("body").delegate('#addField','click', function(event){
     //ADD THREE FIELDS
     function addThreeFields() {
         $("#thisForm").append(`
-        <div class="row mb-2">
+        <div class="row mb-2 formInput">
             <div class="col">
                 <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
                 <label 
@@ -562,16 +562,25 @@ $("#multipleSelectField").on("click", function(){
     $("#addTextArea").on("click", function(){
         formCount++
         $("#thisForm").append(`
-            <div class="formInput my-2">
-                <span>
-                <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea${formCount}" contenteditable="true">Example textarea ${formCount}</label>
-                        <button type="button" class="input-group-append btn delete-button float-right"><i class="fas fa-times"></i></button>
-                        <textarea class="form-control" id="exampleFormControlTextarea${formCount}" rows="5"></textarea>
+            <div class="row mb-2 formInput">
+                <div class="col">
+                    <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
+                    <label 
+                        for="exampleFormControlTextarea${formCount}"
+                        contenteditable="true"
+                        class="font-weight-light"
+                    >
+                        exampleFormControlTextarea${formCount}:
+                    </label>
+                    <div class="input-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea${formCount}"
+                            rows="4"></textarea>
+                        <button type="button" class="btn delete-button">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
-                    <small class="d-none edit-attributes edit-attributes-field form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                
-                </span>
+                    <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>
+                </div>
             </div>
         `)
         
