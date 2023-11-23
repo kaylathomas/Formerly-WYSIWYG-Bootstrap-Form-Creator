@@ -151,7 +151,7 @@ $("#buttonDanger").click(function(event){
 })
 
 //------------------
-// WARNINING BUTTON
+// WARNING BUTTON
 //------------------
 $("#buttonWarning").click(function(event){
     $(".color-button").removeClass("active")

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap Form Creator</title>
+    <!-- Google Fonts -->
+    <!-- Add your Google Fonts! -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Popper JS & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        
+
+    <!-- SLIDE TOGGLE CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+    <!-- JQUERY UI CSS -->
+    <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<!------------------------------------->
+<!--         END OF HEAD TAG         -->
+<!------------------------------------->
+
+<body>
+    <!---------------------------------------------->
+    <!--              NAVBAR HEADER               -->
+    <!---------------------------------------------->
+
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+        <h3 class="font-weight-light mt-5">Forms</h3>
+        <a href="#">Celery seakale</a>
+        <a href="#">Dulse daikon</a>
+        <a href="#">Zucchini garlic</a>
+        <a href="#">Catsear azuki bean</a>
+        <a href="#">Dandelion bunya</a>
+        <a href="#">Rutabaga</a>
+    </nav>
+    
+    <!---------------------------------------------->
+    <!--          /END OF NAVBAR HEADER          --->
+    <!---------------------------------------------->
+
+    <!-- <div class="container"> -->
+        <nav class="navbar bg-black py-1 sticky-top">
+            <a class="navbar-brand">
+                <i class="fas fa-bars showLeft hamburger-bar mx-2 text-white d-none"></i>
+            </a>
+            <form class="form-inline">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" id="simpleEditor" class="btn btn-outline-light active">Simple Editor</button>
+                    <button type="button" id="developerMode" class="btn btn-outline-light mr-2">Developer Mode</button>
+                </div>
+                <input id="nightModeButton" type="checkbox" checked data-toggle="toggle" data-onstyle="outline-light" data-width="50" data-offstyle="outline-light" data-on="<i class='fas fa-cloud-moon ml-1'></i>" data-off="<i class='fas fa-sun ml-1'></i>">
+                <a href="https://github.com/kaylathomas/Formerly-WISYWIG-Bootstrap-Form-Creator"><button type="button" class="btn btn-outline-light ml-2"><i class="fab fa-github"></i> GitHub</button></a>
+            </form>
+        </nav>
+    <!-- </div> -->
+
+        <!-- Just an image -->
+    <div class="container">
+        <div class="row">
+            <div class="text-center my-2">
+                <img id="blackLogo" src="FormerlyLogoLongDarker.png" width="30%" />
+                <!-- <img id="blackLogo" src="FormerlyLogoLongDarker.png" width="30%" /> -->
+            </div>
+            
+            <div class="text-center">
+                <img id="whiteLogo" src="FormerlyLogoLongWhite.png" width="30%" />
+                <!-- <img id="whiteLogo" src="FormerlyLogoLongWhite.png" width="30%" /> -->
+            </div>
+        </div>
+    </div>
+    
+        <!-------------------------------------------->
+    <!--            getYourHTML MODAL           -->
+    <!-------------------------------------------->
+    <div class="modal fade" id="getHTMLModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="display-4 font-weight-lighter modal-title">COPY YOUR CODE</h2>
+                    <button type="button" id="modalClose" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="w-100">
+                        <div class="form-group">
+                            <textarea class="form-control" id="liveCode" rows="10"></textarea>
+                        </div>
+                        <!-- <h2 class="display-4 font-weight-lighter modal-title">FORM PREVIEW</h2>
+                        <div class="preview-container"></div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------->
+    <!--           /getYourHTML MODAL           -->
+    <!-------------------------------------------->
+                                        
+    <!-------------------------------------------->
+    <!--           COLOR PICKER MODAL           -->
+    <!-------------------------------------------->
+    
+    <!-- Modal
+    <div class="modal fade" id="customColorModal" tabindex="-1" role="dialog" aria-labelledby="Custom Color Label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title font-weight-lighter mx-auto" id="exampleModalLabel">CUSTOM BACKGROUND COLOR</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Pick a Color: <input type="color" class="custom-form-background" name="favcolor" value="#ff0000">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-------------------------------------------->
+    <!--           /COLOR PICKER MODAL          -->
+    <!-------------------------------------------->
+
+    <!-- <p class="display-4 font-weight-lighter text-center">Form Color:</p> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3 animated fadeInLeft">
+                <div class="sticky-nav">
+                <div class="accordion w-100 border-black rounded side-nav-shadow" id="accordionExample">
+                    <div id="headingOne">
+                        <div class="pt-1 my-2 nav-borders border-gray text-center">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="false" aria-controls="collapseOne">
+                                <h3 class="font-weight-lighter left-nav-header"><i class="fas fa-palette"></i> 
+                                    Form Color
+                                </h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="mx-auto">
+                                        <h5 class="font-weight-light">Change Form Color</h5>
+                                    </div>
+
+                                    <button type="button" class="btn btn-sm btn-outline-dark color-button btn-block"
+                                        id="buttonDefault">Default</button>
+                                    <button type="button" class="btn btn-sm btn-primary color-button btn-inline w-50"
+                                        id="buttonPrimary">Primary</button>
+                                    <button type="button" class="btn btn-sm btn-secondary color-button btn-inline w-50"
+                                        id="buttonSecondary">Secondary</button>
+                                    <button type="button" class="btn btn-sm btn-success color-button w-50 btn-inline"
+                                        id="buttonSuccess">Success</button>
+                                    <button type="button" class="btn btn-sm btn-danger color-button w-50 btn-inline"
+                                        id="buttonDanger">Danger</button>
+                                    <button type="button" class="btn btn-sm btn-warning color-button w-50 btn-inline"
+                                        id="buttonWarning">Warning</button>
+                                    <button type="button" class="btn btn-sm btn-info color-button w-50 btn-inline"
+                                        id="buttonInfo">Info</button>
+                                    <button type="button" class="btn btn-sm btn-light color-button w-50 btn-inline"
+                                        id="buttonLight">Light</button>
+                                    <button type="button" class="btn btn-sm btn-dark color-button w-50 btn-inline"
+                                        id="buttonDark">Dark</button>
+                                    <!-- <button type="button" class="btn btn-sm btn-outline-dark color-button btn-block"
+                                        id="buttonCustom">Custom <input type="color" id="customFormBackground" value="#ff0000"></button> -->
+
+
+                                </div><!-- ROW END -->
+                            </div><!-- CONTAINER END -->
+                        </div>
+                    </div>
+                    <div id="headingTwo">
+                            <div class="pt-1 my-2 nav-borders border-gray text-center">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    <h3 class="font-weight-lighter left-nav-header"><i class="fas fa-feather"></i> Labels & Font
+                                    </h3>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body text-center">
+
+                                <!-- <button id="addLabel" class="btn btn-primary w-100 mb-2 btn-block">ADD A LABEL <i class="fas fa-plus"></i></button> -->
+                                                            
+                                <h5 class="accordion-headers font-weight-light">Font Weight</h5>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" id="fontWeightLightBtn" class="btn btn-outline-secondary font-weight-button font-weight-light active">Light</button>
+                                    <button type="button" id="fontWeightNormalBtn" class="btn btn-outline-secondary font-weight-button">Normal</button>
+                                    <button type="button" id="fontWeightBoldBtn" class="btn btn-outline-secondary font-weight-button font-weight-bold">Bold</button>
+                                </div>
+
+                                <h5 class="font-weight-light mt-2">Text Align</h5>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" id="textAlignLeftBtn" class="btn btn-outline-secondary text-align-button active">Left Align</button>
+                                    <!-- <button type="button" id="textAlignCenterBtn" class="btn btn-outline-secondary text-align-button">Center Align</button> -->
+                                    <button type="button" id="textAlignRightBtn" class="btn btn-outline-secondary text-align-button">Right Align</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    <div id="headingThree">
+                        <div class="pt-1 mb-2 nav-borders border-gray text-center">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h3 class="font-weight-lighter left-nav-header"><i class="fas fa-pen-nib"></i>
+                                    Input
+                                    Fields</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body text-center">
+                            <form>
+                                <h5 class="font-weight-light">Number of Fields</h5>
+                                <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
+                                    You may add up to 3.
+                                </small>
+
+                                <div class="form-row">
+                                    <input type="range" min="1" max="3" value="3" class="slider w-100"
+                                        id="inputFieldRange" onchange="changeFieldRange()">
+                                    <div class="mx-auto my-2">
+                                        <input type="number" value="3" class="w-25" id="inputFieldNumber"
+                                            oninput="changeFieldNumber()">
+                                    </div>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-primary btn-sm mx-1 font-weight-lighter w-100 btn-block"
+                                id="addField">ADD FIELD <i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div id="headingFour">
+                        <div class="pt-1 mb-2 nav-borders border-gray text-center">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <h3 class="text-center font-weight-lighter left-nav-header"><i
+                                        class="far fa-check-square"></i>
+                                    Checkboxes</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                        data-parent="#accordionExample">
+                        <div class="card-body text-center">
+                            <form>
+                                <h5 class="font-weight-light">Number of Checkboxes</h5>
+                                <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
+                                    You may add up to 3.
+                                </small>
+
+                                <div class="form-row">
+                                    <input type="range" min="1" max="3" value="3" class="slider w-100"
+                                        id="inputCheckboxRange" onchange="changeCheckboxRange()">
+                                    <div class="mx-auto my-2">
+                                        <input type="number" value="3" class="w-25" id="inputCheckboxNumber"
+                                            oninput="changeCheckboxNumber()">
+                                    </div>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-primary btn-sm font-weight-lighter btn-block w-100"
+                                id="addCheckbox">ADD CHECKBOX <i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div id="headingFive">
+                        <div class="pt-1 mb-2 nav-borders border-gray text-center">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <h3 class="text-center font-weight-lighter left-nav-header"><i
+                                        class="far fa-dot-circle"></i>
+                                    Radio
+                                    Buttons</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                        data-parent="#accordionExample">
+                        <div class="card-body text-center">
+                            <form>
+                                <h5 class="font-weight-light">Number of Radio Buttons</h5>
+                                <small id="passwordHelpBlock" class="form-text text-muted mx-auto">
+                                    You may add up to 3.
+                                </small>
+
+                                <div class="form-row">
+                                    <input type="range" min="1" max="3" value="3" class="slider w-100"
+                                        id="inputRadioRange" onchange="changeRadioRange()">
+                                    <div class="mx-auto my-2">
+                                        <input type="number" value="3" class="w-25" id="inputRadioNumber"
+                                            oninput="changeRadioNumber()">
+                                    </div>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-primary btn-sm font-weight-lighter w-100 btn-block"
+                                id="addRadio">ADD RADIO <i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div id="headingSix">
+                        <div class="pt-1 mb-2 nav-borders border-gray text-center">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <h3 class="text-center font-weight-lighter left-nav-header">
+                                    <i class="far fa-clipboard"></i> Form Controls
+                                </h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                        data-parent="#accordionExample">
+                        <div class="card-body text-center">
+                            <button type="button" class="btn btn-primary btn-sm mx-1 font-weight-lighter w-100 btn-block" id="selectField">SELECT
+                                FIELD <i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm mx-1 font-weight-lighter w-100 btn-block"
+                                id="multipleSelectField">MULTIPLE SELECT FIELD <i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-warning btn-sm mx-1 font-weight-lighter w-100 btn-block" id="addTextArea">TEXT
+                                AREA <i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div> <!-- END OF ACCORDION -->
+                <button type="button" class="btn btn-success mt-2 btn-lg btn-block font-weight-lighter sticky-nav"
+                id="getHTML" data-toggle="modal" data-target="#getHTMLModal">GET YOUR
+                HTML <i class="fas fa-code"></i></button>
+                </div>
+            </div>
+
+            <!-- END OF SIDENAV -->
+            
+            <!-- BEGINNING OF FORM-->
+
+            <div class="col-9 animated fadeInDown">
+                <div id="yourForm" class="my-3 form_html">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card w-100">
+                                <div class="card-body" id="cardBody">
+                                    <h3 class="card-title form-title" id="form-title" contenteditable="true">Example Form</h3>
+                                    <form id="thisForm">
+                                        <div class="formInput my-2">
+                                            <span>
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <i class="fas fa-arrows-alt move-button float-left mr-2"></i>
+                                                        <label for="emptyFormInput1" contenteditable="true"
+                                                        class="font-weight-light">First Name:</label>
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control"
+                                                                id="emptyFormInput1"/>
+                                                        </div>
+                                                        <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>    
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="emptyFormInput1" contenteditable="true"
+                                                            class="font-weight-light">Last Name:</label>
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control"
+                                                                id="emptyFormInput1">
+                                                            <button type="button"
+                                                                class="input-group-append btn delete-button">
+                                                                <i class="fas fa-times"></i>
+                                                            </button>
+                                                        </div>
+                                                        <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                                
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="formInput my-2">
+                                            <span>
+                                                <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
+                                                <label for="emptyFormInput2" contenteditable="true"
+                                                    class="font-weight-light">Email:</label>
+                                                <div class="input-group mb-2">
+                                                    <input type="text" class="form-control" id="emptyFormInput2">
+                                                    <button type="button" class="input-group-append btn delete-button">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                        </span>
+                                        </div>
+                                        <div class="formInput my-2">
+                                            <span>
+                                                <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
+                                                <label for="emptyFormInput3" contenteditable="true" class="font-weight-light">Phone Number:</label>
+                                                <div class="input-group mb-2">
+                                                    <input type="text" class="form-control" id="emptyFormInput3">
+                                                    <button type="button" class="input-group-append btn delete-button">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                        </span>
+                                        </div>
+                                        <div class="formInput my-2">
+                                            <span>
+                                                <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
+                                                <label for="emptyFormInput4" contenteditable="true"
+                                                    class="font-weight-light">Address:</label>
+                                                <div class="input-group mb-2">
+                                                    <input type="text" class="form-control" id="emptyFormInput4">
+                                                    <button type="button" class="input-group-append btn delete-button">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                                <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                        </span>
+                                        </div>
+                                        <div class="formInput my-2">
+                                            <span>
+                                                <i class="fas fa-arrows-alt move-button float-left mr-2"></i> 
+                                                <div class="form-group">
+                                                        <label for="exampleFormControlTextarea5" contenteditable="true"
+                                                        class="font-weight-light">Message:</label>
+                                                        <button type="button"
+                                                        class="input-group-append btn delete-button float-right"><i
+                                                            class="fas fa-times"></i></button>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea5"
+                                                        rows="4"></textarea>
+                                                    <small class="d-none edit-attributes form-text mb-1" data-toggle="modal" data-target="#editingModal">Edit Attributes</small>                                            </div>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div><!--CARD BODY-->
+                            </div><!--CARD DIV-->
+                        </div><!--ROW END-->
+                    </div><!--CONTAINER END-->
+                </div><!--yourForm CONTAINER-->
+            </div><!-- COL-8 DIV -->
+        </div>
+    </div>
+
+    </div>
+    <p id="hiddenDiv" class="d-none"></p>
+    <p id="hiddenPreviewDiv" class="d-none"></p>
+
+    <div id="modalContainer">
+        <!-- EDIT ATTRIBUTES MODAL -->
+        <div class="container">
+            <div class="modal fade" id="editingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="display-4 font-weight-lighter modal-title">EDIT ATTRIBUTES</h2>                    
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row float-right">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="requiredCheck">
+                                    <label class="form-check-label" for="requiredCheck">
+                                        Required?
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="inputID">Input ID:</label>
+                                    <input type="text" class="form-control" id="inputID">
+                            </div>
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="inputPlaceholder">Placeholder Text:</label>
+                                    <input type="text" class="form-control" id="inputPlaceholder">
+                                </div>
+                                <div class="col-6">
+                                    <label for="inputPreFilled">Pre-filled Value:</label>
+                                    <input type="text" class="form-control" id="inputPreFilled">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMaxLength">Max Length:</label>
+                                <input type="text" class="form-control" id="inputMaxLength">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputType">Input Type:</label>
+                                <select class="form-control" id="inputType">
+                                    <option><i>Select...</i></option>
+                                    <option>Text</option>
+                                    <option>Number</option>
+                                    <option>Email</option>
+                                    <option>Password</option>
+                                    <option>Date</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MY JS -->
+    <script src="js/addInputs.js"></script>
+    <script src="js/formChanges.js"></script>
+    <script src="js/navbarScript.js"></script>
+
+    <!-- BOOTSTRAP 5 JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- CLASSIE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.js"></script>
+
+    <!-- JQUERY & JQUERY UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+
+    <!-- JQUERY UI -->
+    <script src="jquery-ui/jquery-ui.js"></script>
+</body>
+
+
+</html>
