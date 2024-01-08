@@ -60,13 +60,38 @@
             <a class="navbar-brand">
                 <i class="fas fa-bars showLeft hamburger-bar mx-2 text-white d-none"></i>
             </a>
-            <form class="form-inline">
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <form>
+                <div class="input-group col" aria-label="Basic example">
                     <button type="button" id="simpleEditor" class="btn btn-outline-light active">Simple Editor</button>
                     <button type="button" id="developerMode" class="btn btn-outline-light mr-2">Developer Mode</button>
                 </div>
-                <input id="nightModeButton" type="checkbox" checked data-toggle="toggle" data-onstyle="outline-light" data-width="50" data-offstyle="outline-light" data-on="<i class='fas fa-cloud-moon ml-1'></i>" data-off="<i class='fas fa-sun ml-1'></i>">
-                <a href="https://github.com/kaylathomas/Formerly-WISYWIG-Bootstrap-Form-Creator"><button type="button" class="btn btn-outline-light ml-2"><i class="fab fa-github"></i> GitHub</button></a>
+                <div 
+                    id="darkmodeToggle"
+                    class="form-check form-switch col"
+                >
+                    <label 
+                        class="form-check-label text-white"
+                        for="flexSwitchCheckDefault"
+                    >
+                        <i class="las la-sun"></i>
+                    </label>
+                    <input 
+                        checked    
+                        id="flexSwitchCheckDefault"
+                        type="checkbox"
+                        class="form-check-input form-control"
+                        data-toggle="toggle"
+                        data-width="50"
+                    >
+                </div>
+                <div class="col">
+                    <a href="https://github.com/kaylathomas/Formerly-WISYWIG-Bootstrap-Form-Creator">
+                        <button type="button" class="btn btn-outline-light ml-2">
+                            <i class="fab fa-github"></i> 
+                            GitHub
+                        </button>
+                    </a>
+                </div>
             </form>
         </nav>
     <!-- </div> -->

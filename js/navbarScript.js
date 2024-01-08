@@ -75,8 +75,9 @@ $("#whiteLogo").hide()
 //		NIGHTMODE LOGIC
 //============================
 
-$("#nightModeButton").on('change.bootstrapSwitch', function(e) {
+$("#darkmodeToggle").click(function(e) {
 	e.preventDefault(e)
+	$("#darkmodeToggle").val() == '<i class="las la-sun"></i>' ? $("#darkmodeToggle").html('<i class="las la-moon"></i>') : $("#darkmodeToggle").html('<i class="las la-sun"></i>')
 	$("body").toggleClass("bg-black")
 	$(".accordion").toggleClass("border-black border-white side-nav-shadow")
 	$(".py-0").toggleClass("bg-dark-gray bg-black")
